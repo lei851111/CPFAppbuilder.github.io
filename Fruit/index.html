@@ -6,8 +6,8 @@
   <script src="assets/jquery-3.2.1.min.js"></script>
   <link rel="stylesheet" href="assets/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/app.css">
-  <!--<script src="js/user.js"></script>
-   <script src="js/aop.js"></script>-->
+  <script src="js/user.js"></script>
+   <script src="js/aop.js"></script>
 
 
 </head>
@@ -82,8 +82,20 @@
   <script type="text/javascript">
     //aop.aopDownload();
     //console.log(stock);
-    var stock;
-var aaa = ['Apple','Lemon','Orange','Lychee','Grapes'];
+    //var stock;
+    //var aaa = ['Apple','Lemon','Orange','Lychee','Grapes'];
+    
+    //kanzo+
+    
+    //var mfruit = cpf.get("items");
+    //var weight = cpf.get("weight");
+    var mfruit = "{\"items\": [{\"pos\": [2, 78, 634, 477], \"conf\": 0.9493815302848816, \"cls\": \"apple\"},{\"pos\": [2, 78, 634, 477], \"conf\": 0.9493815302848817, \"cls\": \"apple\"}]}";
+    var weight = "{\"weight\": 456}";
+    
+    //find out how many pieces apple in the scale
+    var temp = mfruit;
+    var count = (temp.match(/apple/g) || []).length;
+    //kanzo-
     for(var i=0;i<5;i++){
       document.getElementById(aaa[i]).innerHTML = stock[aaa[i]] + ' KG';
     }
